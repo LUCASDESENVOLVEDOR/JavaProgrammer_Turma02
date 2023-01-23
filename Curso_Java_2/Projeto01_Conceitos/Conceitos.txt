@@ -1,0 +1,6 @@
+Conceitos do Java
+
+1. Tudo em Java é classe.
+2. Toda classe em Java deve iniciar com letra maiuscula.
+   Todo o resto com letra minuscula.
+3. Java é multiplaforma
