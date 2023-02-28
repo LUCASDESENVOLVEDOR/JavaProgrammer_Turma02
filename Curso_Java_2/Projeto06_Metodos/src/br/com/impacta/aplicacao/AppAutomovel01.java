@@ -9,7 +9,7 @@ public class AppAutomovel01 {
 					
 					//declarando variaveis.		
 		Automovel auto = new Automovel();
-		auto.lerDados("Honda","Civic",1959,"EBX1234");
+		auto.lerDados("Honda","Civic",2000,"EBX1234");
 		
 		//auto.setAno(1959);
 		
@@ -23,8 +23,17 @@ public class AppAutomovel01 {
 		texto = auto2.mostrar();
 		System.out.println(texto);
 		
-		int n = Integer.parseInt(
-				JOptionPane.showInputDialog("Informe um número"));
+		JOptionPane.showMessageDialog(null, auto2.mostrar(),"Relatório", JOptionPane.QUESTION_MESSAGE);
+		
+		
+		
+		
+		//int n = Integer.parseInt(
+			//	JOptionPane.showInputDialog("Informe um número"));
+		
+		
+		
+		
 		
 		
 	}
