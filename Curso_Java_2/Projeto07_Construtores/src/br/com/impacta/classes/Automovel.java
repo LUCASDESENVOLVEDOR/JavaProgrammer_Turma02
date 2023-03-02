@@ -7,6 +7,7 @@ private	String modelo;
 private	int ano;
 private	String placa;
 
+
 private static final String PAIS_ORIGEM = "Brasil";
 
 
@@ -15,6 +16,31 @@ private static final String PAIS_ORIGEM = "Brasil";
 //DEFAULT = Todos no pacote tem acesso.
 //PUBLIC = Geral
 //PRIVATE = Apenas a classe terá acesso.
+
+//construtores
+public Automovel(String marca, String modelo) {
+	this.setMarca(marca);
+	this.setModelo(modelo);
+	
+}
+
+public Automovel(String marca, String modelo, int ano) {
+	this.setMarca(marca);
+	this.setModelo(modelo);
+	this.setAno(ano);
+	
+}
+public Automovel(String marca, String modelo, int ano, String placa) {
+	this.setMarca(marca);
+	this.setModelo(modelo);
+	this.setAno(ano);
+	this.setPlaca(placa);
+	
+	
+}
+
+
+
 
 public String getMarca() {
 	return marca;
@@ -62,11 +88,19 @@ public String mostrar() {
 	String titulo = "DADOS DO AUTOMÓVEL: ";
 	
 	String resposta = titulo +  "\n\nMarca: " + this.getMarca() + 
-			          "\nModelo: " + this.getModelo() + 
-			          "\nAno: " + this.getAno() + 
-			          "\nPlaca: " + this.getPlaca() +
-			          "\nPaís Origem: " + PAIS_ORIGEM;
+			          "\nModelo: " + this.getModelo() ;
 	
+	               if(this.getAno() > 0) {
+	            	   resposta +=   "\nAno: " + this.getAno();
+	               }
+	 
+	               if(this.getPlaca() != null) {
+	            	   //resposta = resposta + "\nPlaca: " + this.getPlaca();
+	            	   resposta +=  "\nPlaca: " + this.getPlaca();
+	               }
+	               			         
+	               resposta += "\nPaís Origem: " + PAIS_ORIGEM;
+
 	 return resposta;	
 	
 }

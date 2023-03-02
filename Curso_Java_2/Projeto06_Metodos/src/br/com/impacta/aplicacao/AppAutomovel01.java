@@ -17,6 +17,14 @@ public class AppAutomovel01 {
 		String texto = auto.mostrar();
 		System.out.println(texto);		
 		
+		
+		//Automovel.PAIS_ORIGEM = "Argentina" ;
+		
+		JOptionPane.showMessageDialog(null, auto.mostrar());
+		
+		
+		
+		
 		Automovel auto2 = new Automovel();
 		
 		auto2.lerDados("Chevrolet","Corsa",2014,"AAA000");

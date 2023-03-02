@@ -1,0 +1,9 @@
+Regra dos contrutores:
+
+1. Toda classe possui um construtor.
+2. O construtor é um método como o mesmo nome da classe.
+3. Se nenhum construtor for entrado na classe, o compilador
+   inclui um construtor padrão.
+4. Se colocarmos ao menos um construtor na classe, este 
+será usado, e o compilador não interfere mais.
+5. O construtor é um método sem valor de retorno definido.
