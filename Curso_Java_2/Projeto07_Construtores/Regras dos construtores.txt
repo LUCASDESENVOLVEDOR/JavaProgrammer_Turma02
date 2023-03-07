@@ -7,3 +7,6 @@ Regra dos contrutores:
 4. Se colocarmos ao menos um construtor na classe, este 
 será usado, e o compilador não interfere mais.
 5. O construtor é um método sem valor de retorno definido.
+6. O construtor é executado uma única vez, e quando executado,
+   é pelo operador new.
+   
