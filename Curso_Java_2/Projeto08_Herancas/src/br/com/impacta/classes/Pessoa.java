@@ -2,11 +2,21 @@ package br.com.impacta.classes;
 
 import br.com.impacta.enumeracoes.Sexo;
 
-public class Pessoa {
+public class Pessoa  {
 	
 	private String nome;
 	private int idade;
 	private Sexo sexo;
+	
+	public Pessoa() {
+		super();
+	}
+	
+	public Pessoa(String nome,int idade, Sexo sexo) {
+		this.setNome(nome);
+		this.setIdade(idade);
+		this.setSexo(sexo);
+	}
 	
 	
 	public String getNome() {
@@ -27,6 +37,7 @@ public class Pessoa {
 	public void setSexo(Sexo sexo) {
 		this.sexo = sexo;
 	}
+	
 	
 	
 	public String mostrar() {

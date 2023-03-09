@@ -41,6 +41,15 @@ public class Curso {
 		this.preco = preco;
 	}
 	
+	public String mostrar() {
+		
+		return "Código: " + this.getCodigo() +
+				"\nDescrição: " + this.getDescricao() +
+				"\nCarga Horária: " + this.getCargaHoraria() + 
+				"\nPreço: " + this.getPreco();
+		
+	}
+	
 	
 
 }
