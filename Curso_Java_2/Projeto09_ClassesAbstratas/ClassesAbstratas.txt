@@ -1,0 +1,12 @@
+Classe Abstrata
+
+São classes que não podem ser
+instanciadas. Elas servem exclusivamente como
+superclasses.
+
+
+Interfaces.
+
+1. Na herança, somente podemos extender uma 
+classe, porém, podemos implementar 
+várias classes.

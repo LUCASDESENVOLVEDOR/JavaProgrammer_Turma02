@@ -2,7 +2,7 @@ package br.com.impacta.classes;
 
 import br.com.impacta.enumeracoes.Sexo;
 
-public class Pessoa  {
+public abstract class Pessoa  {
 	
 	private String nome;
 	private int idade;
