@@ -7,13 +7,6 @@ public class Curso {
 	private int cargaHoraria;
 	private double preco;
 	
-	public Curso(int codigo, String descricao, int cargaHoraria, double preco) {
-		super();
-		this.setCodigo(codigo);
-		this.setDescricao(descricao);
-		this.setCargaHoraria(cargaHoraria);
-		this.setPreco(preco);
-	}
 	
 	
 	public int getCodigo() {
@@ -41,12 +34,21 @@ public class Curso {
 		this.preco = preco;
 	}
 	
-	public String mostrar() {
+	public Curso(int codigo, String descricao, int cargaHoraria, double preco) {
+		super();
+		this.setCodigo(codigo);
+		this.setDescricao(descricao);
+		this.setCargaHoraria(cargaHoraria);
+	    this.setPreco(preco);
 		
-		return "Código: " + this.getCodigo() +
-				"\nDescrição: " + this.getDescricao() +
-				"\nCarga Horária: " + this.getCargaHoraria() + 
-				"\nPreço: " + this.getPreco();
+	}
+	
+	
+	public String mostrar() {
+		return "Código: " + this.getCodigo() + 
+				"\nDescrição: " + this.getDescricao() + 
+				"\nCarga Horária: " + this.getCargaHoraria() +
+				"\nPreço: " + this.getPreco();	
 		
 	}
 	

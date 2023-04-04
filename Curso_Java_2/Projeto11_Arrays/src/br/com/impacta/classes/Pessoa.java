@@ -3,13 +3,17 @@ package br.com.impacta.classes;
 import br.com.impacta.enumeracoes.Sexo;
 import br.com.impacta.interfaces.Documento;
 
-public abstract class Pessoa  {
+public abstract class Pessoa {
 	
 	private String nome;
 	private int idade;
 	private Sexo sexo;
+	
 	private Documento documento;
 	
+	public Pessoa() {
+		super();
+	}
 	
 	public Documento getDocumento() {
 		return documento;
@@ -19,15 +23,12 @@ public abstract class Pessoa  {
 		this.documento = documento;
 	}
 
-	public Pessoa() {
+	public Pessoa(String nome, int idade, Sexo sexo,Documento documento) {
 		super();
-	}
-	
-	public Pessoa(String nome,int idade, Sexo sexo, Documento docpessoa) {
 		this.setNome(nome);
 		this.setIdade(idade);
 		this.setSexo(sexo);
-		this.setDocumento(docpessoa);
+		this.setDocumento(documento);
 	}
 	
 	
@@ -51,19 +52,38 @@ public abstract class Pessoa  {
 	}
 	
 	
-	
 	public String mostrar() {
 		
 		return "Nome: " + this.getNome() + 
 				"\nIdade: " + this.getIdade() + 
-				"\nSexo: " + this.getSexo() +
-				(this.getDocumento() instanceof 
-						DocumentoCpf ? "\nCPF: ": "\nCNPJ: ") +      
+				"\nSexo: " + this.getSexo() + 
 				
-				 this.getDocumento().getNumero();
-		
+	   (this.getDocumento() instanceof DocumentoCpf ? "\nCPF: ": "\nCNPJ: ")
+				 +  this.getDocumento().getNumero();
 		
 	}
-	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

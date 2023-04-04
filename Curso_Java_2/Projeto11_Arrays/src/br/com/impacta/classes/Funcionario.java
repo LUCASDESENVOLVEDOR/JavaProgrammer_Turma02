@@ -4,25 +4,22 @@ import br.com.impacta.enumeracoes.Sexo;
 import br.com.impacta.interfaces.Documento;
 
 public class Funcionario extends Pessoa {
- // extends = (Herança) - Subclasse de Pessoa.
+
+	//extends - Herança - (Subclasse de pessoa)
 	
 	private String cargo;
 	private double salario;
+	
 	
 	public Funcionario() {
 		super();
 	}
 	
-	
-	public Funcionario(String nome, int idade, Sexo sexo,Documento documento, String cargo, 
-			double salario) {
-		
-		super(nome,idade,sexo,documento);
+	public Funcionario(String nome, int idade, Sexo sexo,Documento documento, String cargo, double salario) {
+		super(nome, idade,sexo,documento);
 		this.setCargo(cargo);
 		this.setSalario(salario);
-		
 	}
-	
 	
 	public String getCargo() {
 		return cargo;
@@ -48,8 +45,3 @@ public class Funcionario extends Pessoa {
 	
 	
 }
-
-
-
-
-

@@ -1,38 +1,34 @@
 package br.com.impacta.utilitarios;
 
 public class Utilitarios {
+		
 	
-	String curso = "Java";
+	public static  double somar (double x, double y) {
+		return x + y;
+	}
 	
-
-public static double somar(double x, double y) {
+	//escrever um metodo que receba como parametro um texto e retorno
+	//este texto sem espacos.	
+	public static String removerEspacos(String texto) {
+		
+		return texto.replace(" ", "");
+		
+		
+	}
 	
-	return x + y;
-}
-
-
-
-public static String RemoverEspacos(String texto) {
+	//escrever um metodo que receba como parametro um nome e um sobrenome
+	// e retorne um email no formato:  nome.sobrenome@impacta.com.br
 	
-	return texto.replace(" ","");
-	
-}
-
-//Escrever um método que receba como parametro um nome e um sobrenome
-// e retorno um email no formato: nome.sobrenome@impacta.com.br
-
-public static String gerarEmail(String nome, String sobrenome) {
-	
-	String email = nome.toLowerCase() + "." 
-	                     + sobrenome.toLowerCase() + "@impacta.com.br";
-	  
-	//return RemoverEspacos(nome.toLowerCase() + "." 
-	                   //  + sobrenome.toLowerCase() + "@impacta.com.br");
+	public static String gerarEmail(String nome, String sobrenome) {
+		
+		String email = nome.toLowerCase() + "." + 
+		               sobrenome.toLowerCase() + "@impacta.com.br";
+		
+		return removerEspacos(email);
+		
+		
+	}
 	
 	
-	return RemoverEspacos(email);
-}
-
-
 
 }

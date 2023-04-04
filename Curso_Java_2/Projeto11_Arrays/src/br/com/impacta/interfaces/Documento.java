@@ -2,9 +2,7 @@ package br.com.impacta.interfaces;
 
 public interface Documento {
 	
-	void SetNumero(String numero);
-	
+	void setNumero(String numero);
 	String getNumero();
-	
 
 }

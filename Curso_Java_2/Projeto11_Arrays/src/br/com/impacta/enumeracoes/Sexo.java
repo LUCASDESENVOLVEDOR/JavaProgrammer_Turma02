@@ -1,6 +1,8 @@
 package br.com.impacta.enumeracoes;
 
 public enum Sexo {
-	MASCULINO, FEMININO, OUTROS
-     //0            //1   //2
+	MASCULINO, //0 
+	FEMININO, // 1
+	OUTROS  //2
+
 }

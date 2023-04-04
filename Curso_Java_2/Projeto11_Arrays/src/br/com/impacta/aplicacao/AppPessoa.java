@@ -10,32 +10,32 @@ import br.com.impacta.enumeracoes.Sexo;
 
 public class AppPessoa {
 
-	public static void main(String[] args) {	
+	public static void main(String[] args) {
 		
-		//instancia da classe pessoa.
+		//instancia da classe Pessoa
 		//Pessoa pessoa = new Pessoa();
+		
 		//pessoa.setNome("Lucas");
 		//pessoa.setIdade(29);
 		//pessoa.setSexo(Sexo.MASCULINO);
-		//JOptionPane.showMessageDialog(null, pessoa.mostrar());
+		//JOptionPane.showMessageDialog(null, pessoa.mostrar());			
 		
-		
-		//instancia da classe funcionario.
+		//instancia da classe Funcionario.
 		Pessoa  funcionario = new Funcionario();
 		funcionario.setNome("Joel");
-		funcionario.setIdade(20);
+		funcionario.setIdade(29);
 		funcionario.setSexo(Sexo.MASCULINO);
 		((Funcionario)funcionario).setCargo("Motoboy");
-		((Funcionario)funcionario).setSalario(4000);
+		((Funcionario)funcionario).setSalario(3500);
 		JOptionPane.showMessageDialog(null, funcionario.mostrar());
 		
 		
-		//instancia da classe aluno.
+		//instancia da classe Aluno.
 		Pessoa aluno = new Aluno();
-		aluno.setNome("Bianca");
+		aluno.setNome("Amanda");
 		aluno.setIdade(20);
 		aluno.setSexo(Sexo.FEMININO);
-		((Aluno)aluno).setMatricula(1233);
+		((Aluno)aluno).setMatricula(12345);
 		
 		//Curso cursoDoAluno = new Curso();
 		//cursoDoAluno.setCodigo(222);
@@ -43,45 +43,28 @@ public class AppPessoa {
 		//cursoDoAluno.setCargaHoraria(100);
 		//cursoDoAluno.setPreco(1000);
 		
+		//comentar aqui.
+		
+		//Aluno aluno1 = (Aluno)aluno;
+		
 		((Aluno)aluno).setCurso(new Curso(222,"Java Programmer",100,1000));
+		
 		JOptionPane.showMessageDialog(null, aluno.mostrar());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
