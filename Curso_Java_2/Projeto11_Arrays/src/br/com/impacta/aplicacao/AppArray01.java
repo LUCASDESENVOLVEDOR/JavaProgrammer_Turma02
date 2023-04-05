@@ -15,9 +15,17 @@ public class AppArray01 {
 		numeros[4] = 8;
 				
 		
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < numeros.length; i++) {
 			System.out.println(numeros[i]);
 		}
+		
+		System.out.println();
+		
+		for (int i = numeros.length-1; i >= 0 ; i--) {
+			System.out.println(numeros[i]);
+		
+		}
+		
 		
 		
 	}

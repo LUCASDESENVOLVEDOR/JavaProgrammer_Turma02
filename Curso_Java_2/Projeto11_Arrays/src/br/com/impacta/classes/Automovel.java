@@ -1,6 +1,6 @@
 package br.com.impacta.classes;
 
-public class Automovel {
+public class Automovel implements Comparable<Automovel> {
 	
 	
 //atributos.
@@ -130,6 +130,16 @@ public final  static String paisOrigem = "Brasil";
     	this(marca,modelo,ano);
 		this.setPlaca(placa);
 		
+	}
+
+	@Override
+	public int compareTo(Automovel auto) {
+		
+		if(this.getMarca().compareTo(auto.getMarca()) == 0) {
+			return this.getModelo().compareTo(auto.getModelo());
+		}
+		
+		return this.getMarca().compareTo(auto.getMarca());
 	}
 	
 
