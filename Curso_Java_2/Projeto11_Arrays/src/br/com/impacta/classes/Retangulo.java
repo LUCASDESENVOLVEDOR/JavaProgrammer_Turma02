@@ -2,11 +2,17 @@ package br.com.impacta.classes;
 
 import br.com.impacta.interfaces.Figura;
 
-public  class Retangulo implements Figura {
+public class Retangulo implements Figura {
 	
 	private double base;
 	private double altura;
 	
+	
+	public Retangulo(double base, double altura) {
+		super();
+		this.setAltura(altura);
+		this.setBase(base);
+	}
 	public double getBase() {
 		return base;
 	}
@@ -20,12 +26,12 @@ public  class Retangulo implements Figura {
 		this.altura = altura;
 	}
 	
+	
 	@Override
 	public double calcularArea() {
 		
 		return this.getBase() * this.getAltura();
 	}
-	
 	
 	
 	

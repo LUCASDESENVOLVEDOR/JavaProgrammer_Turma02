@@ -3,19 +3,22 @@ package br.com.impacta.classes;
 public class ProdutoImportado extends Produto {
 	
 	private double taxaImportacao;
-	
-	
-	public ProdutoImportado(String categoria,String descricao, double preco) {
+
+	public ProdutoImportado(String categoria, String descricao,double preco) {
 		super(categoria,descricao,preco);
 	}
 	
-	public ProdutoImportado(String categoria,String descricao, double preco, 
-			double taxaimportacao) {
+	public ProdutoImportado(String categoria, 
+			                String descricao,
+			                double preco,
+			                double taxaImportacao) {
+		
 		this(categoria,descricao,preco);
-		this.setTaxaImportacao(taxaimportacao);
+		this.setTaxaImportacao(taxaImportacao);
+		
 	}
 	
-
+	
 	public double getTaxaImportacao() {
 		return taxaImportacao;
 	}
@@ -27,7 +30,7 @@ public class ProdutoImportado extends Produto {
 	@Override
 	public String mostrar() {
 		
-		return super.mostrar() + 
+		return super.mostrar() +
 				"\nTaxa de Importação: " + this.getTaxaImportacao();
 	}
 	
@@ -35,4 +38,13 @@ public class ProdutoImportado extends Produto {
 	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

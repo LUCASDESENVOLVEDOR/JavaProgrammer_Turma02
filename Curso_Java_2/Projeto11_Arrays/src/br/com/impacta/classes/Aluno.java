@@ -4,23 +4,19 @@ import br.com.impacta.enumeracoes.Sexo;
 import br.com.impacta.interfaces.Documento;
 
 public class Aluno extends Pessoa {
-	
+
 	private int matricula;
 	private Curso curso;
-	
 	
 	public Aluno() {
 		super();
 	}
 	
-	public Aluno(String nome, int idade, Sexo sexo,Documento documento, int matricula, Curso curso) {
-		super(nome, idade, sexo,documento);
+	public Aluno(String nome, int idade, Sexo sexo, Documento documento, int matricula, Curso curso) {
+		super(nome,idade,sexo,documento);
 		this.setMatricula(matricula);
 		this.setCurso(curso);
-		
 	}
-	
-	
 	
 	public int getMatricula() {
 		return matricula;
@@ -37,27 +33,30 @@ public class Aluno extends Pessoa {
 
 	
 	
-    @Override
+	@Override
 	public String mostrar() {
 		
-		return super.mostrar() + 
+		return super.mostrar() +
 				"\nMatrícula: " + this.getMatricula() +
 				
-				//(condicao)? "true" : "false"
+				// (condicao) ? "true" : "false" 
 				
-				( (this.getCurso() == null) ? "\nNenhum curso atribuído." :
-					"\n\nDADOS DO CURSO:\n\n" + this.getCurso().mostrar()
-
+				( (this.getCurso() == null) ? "\nNenhum curso atribuído" :
+					
+					"\n\nDADOS DO CURSO\n\n" + this.getCurso().mostrar()	
 				);
-				
-				
-				
 		
 	}
 	
 	
-
+	
+	
 }
+
+
+
+
+
 
 
 

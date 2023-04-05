@@ -6,22 +6,26 @@ import br.com.impacta.classes.Circulo;
 
 import br.com.impacta.classes.Retangulo;
 
+
 public class AppFiguras {
 	public static void main(String[] args) {
 		
-		Retangulo ret = new Retangulo();
-		ret.setBase(10);
-		ret.setAltura(15);
+		Retangulo ret = new Retangulo(10,15);
+		//ret.setBase(10);
+		//ret.setAltura(15);
 		
-		Circulo circ = new Circulo();
-		circ.setRaio(5);
+		Circulo circ = new Circulo(5);
+		//circ.setRaio(5);
 		
-		
-		JOptionPane.showMessageDialog(null, circ.apresentarFigura());
+	
 		JOptionPane.showMessageDialog(null, ret.apresentarFigura());
+		JOptionPane.showMessageDialog(null, circ.apresentarFigura());
+		
+		//Objetivo da interface é um template , quem "contratar"
+		//terá uma personalização.
 		
 	}
 	
-
+	
 
 }

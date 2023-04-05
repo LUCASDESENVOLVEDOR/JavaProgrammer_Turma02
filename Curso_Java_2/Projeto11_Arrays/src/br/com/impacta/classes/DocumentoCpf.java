@@ -6,28 +6,26 @@ public class DocumentoCpf implements Documento {
 
 	private String cpf;
 	
-	
 	public DocumentoCpf(String cpf) {
-		super();
-		this.setNumero(cpf);
+		this.SetNumero(cpf);
 	}
-
+	
+	
 	@Override
-	public void setNumero(String numero) {
+	public void SetNumero(String numero) {
 		
-		if(!numero.matches("[0-9]{11}")) {
-			throw new NumberFormatException("O CPF dever ter 11 dígitos.");		
-			
-		}
+		  if(!numero.matches("[0-9]{11}")) {
+			  throw new  NumberFormatException("O CPF deve ter 11 dígitos.");
+		  }	
+		  
+		  this.cpf = numero;
 		
-		this.cpf = numero;
-			
 	}
 
 	@Override
 	public String getNumero() {
-	
-		return  this.cpf;
+		
+		return this.cpf;
 	}
 
 }

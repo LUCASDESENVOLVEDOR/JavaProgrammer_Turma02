@@ -1,12 +1,19 @@
 package br.com.impacta.classes;
 
-public class Curso {
+public class Curso implements Comparable<Curso> {
 	
 	private int codigo;
 	private String descricao;
 	private int cargaHoraria;
 	private double preco;
 	
+	public Curso(int codigo, String descricao, int cargaHoraria, double preco) {
+		super();
+		this.setCodigo(codigo);
+		this.setDescricao(descricao);
+		this.setCargaHoraria(cargaHoraria);
+		this.setPreco(preco);
+	}
 	
 	
 	public int getCodigo() {
@@ -16,7 +23,7 @@ public class Curso {
 		this.codigo = codigo;
 	}
 	public String getDescricao() {
-		return descricao;
+		return descricao.toUpperCase();
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
@@ -34,22 +41,19 @@ public class Curso {
 		this.preco = preco;
 	}
 	
-	public Curso(int codigo, String descricao, int cargaHoraria, double preco) {
-		super();
-		this.setCodigo(codigo);
-		this.setDescricao(descricao);
-		this.setCargaHoraria(cargaHoraria);
-	    this.setPreco(preco);
+	public String mostrar() {
+		
+		return "Código: " + this.getCodigo() +
+				"\nDescrição: " + this.getDescricao() +
+				"\nCarga Horária: " + this.getCargaHoraria() + 
+				"\nPreço: " + this.getPreco();
 		
 	}
-	
-	
-	public String mostrar() {
-		return "Código: " + this.getCodigo() + 
-				"\nDescrição: " + this.getDescricao() + 
-				"\nCarga Horária: " + this.getCargaHoraria() +
-				"\nPreço: " + this.getPreco();	
-		
+
+
+	@Override
+	public int compareTo(Curso argumento) {		
+		return  this.getDescricao().compareTo(argumento.getDescricao());
 	}
 	
 	
