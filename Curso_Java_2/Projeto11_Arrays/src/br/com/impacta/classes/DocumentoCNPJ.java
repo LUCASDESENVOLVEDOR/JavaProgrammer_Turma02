@@ -2,23 +2,27 @@ package br.com.impacta.classes;
 
 import br.com.impacta.interfaces.Documento;
 
-public class DocumentoCNPJ implements Documento {
+public class DocumentoCnpj  implements Documento {
+
 
 	private String cnpj;
 	
-	public DocumentoCNPJ(String cnpj) {
+	
+	
+	
+	public DocumentoCnpj(String cnpj) {
 		super();
-		this.setNumero(cnpj);
+		this.SetNumero(cnpj); 
 	}
 
 	@Override
-	public void setNumero(String numero) {
-		if(!numero.matches("[0-9]{14}")) {
-			throw new NumberFormatException("O CNPJ dever ter 14 dígitos.");		
-			
-		}
+	public void SetNumero(String numero) {
 		
-		this.cnpj = numero;
+		  if(!numero.matches("[0-9]{14}")) {
+			  throw new  NumberFormatException("O CNPJ deve ter 14 dígitos.");
+		  }	
+		  
+		  this.cnpj = numero;
 		
 	}
 
@@ -27,8 +31,5 @@ public class DocumentoCNPJ implements Documento {
 		
 		return this.cnpj;
 	}
-	
-	
-	
 
 }
